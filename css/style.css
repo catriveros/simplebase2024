@@ -208,9 +208,3 @@ body {
     .three-fourths { grid-column: span 9 / span 9; }
 }
 
-/* FOR DEMO PURPOSES */
-.demo > * {
-    background-color: #444;
-    padding: 1em;
-    text-align: center;
-}
