@@ -61,7 +61,7 @@ body { margin: 0; }
 body {
 
     /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
-    background-color:white;
+    background-color:rgb(74, 74, 74);
 
     /* SET THE COLOR OF THE MAIN BODY TEXT */
     color: var(--color-text-body);
