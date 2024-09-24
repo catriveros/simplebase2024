@@ -288,11 +288,12 @@ body {
 .site-header {
     background-color: var(--color-siteheader-background);
     
-    /* PUT ALL HEADER CHILDREN SIDE-BY-SIDE AND VERT CENTERED */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    /* PUT ALL HEADER CHILDREN SIDE-BY-SIDE AND VERT CENTERED ON LARGE SCREENS */
+    @media (min-width 768) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     /* ADD SOME GENERAL SPACING AROUND THE HEADER */
     padding: var(--unit-small);
 
@@ -333,6 +334,9 @@ body {
 
             /* DISPLAY CHILDREN SIDE-BY-SIDE */
             display: flex;
+            @media (min-width 768){
+                display: flex;
+            }
         }
 
         /* MAKE SITE NAV LINKS BIG LIKE BUTTONS */
