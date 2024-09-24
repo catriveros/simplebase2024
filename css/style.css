@@ -39,16 +39,25 @@ CSS TABLE OF CONTENTS
 
 :root {
 
-    /* DEFINE ALL COMMONLY USED COLORS HERE */
+/* DEFINE ALL COMMONLY USED COLORS HERE */
+--color-body-background: rgb(255 255 255);
+--color-text-body: rgb(0 0 0 / .8);
+--color-text-headings: rgb(0 0 0 / 1);
 
-    --color-body-background:rgb(255 255 255);
-    --color-text-body: rgb(0 0 0 / .8);
-    --color-text-headings: rgb(0 0 0 / 1);
-    --color-links: rgb(255 255 0 / .7);
-    --color-links-hover: rgb(0 255 255 / 1);
-    --color-siteheader-background: transparent;
-    --color-siteheader-links: rgb(255 255 255); 
-    --color-hero-background: rgb(100 100 100);
+--color-links: rgb(0 0 153 / 0.8);
+--color-links-hover: rgb(0 0 153 / 1);
+
+--color-siteheader-background: transparent;
+--color-siteheader-links: rgb(255 255 255);
+
+--color-hero-background: rgb(100 100 100);
+--color-hero-text: rgb(255 255 255 / .8);
+--color-hero-headings: rgb(255 255 255 / 1);
+
+--color-sitefooter-background: rgb(100 100 100);
+--color-sitefooter-text: rgb(255 255 255 / .8);
+--color-sitefooter-headings: rgb(255 255 255 / 1);
+--color-sitefooter-links: rgb(255 255 255);
 
     /*  DEFINE ALL FONTS USED HERE */
     --font-body: system-ui, Helvetica, Arial, sans-serif;
