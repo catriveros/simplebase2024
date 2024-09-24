@@ -386,3 +386,27 @@ section {
     /* ADD SOME GENERAL PADDING AROUND THE FOOTER */
     padding: var(--unit-small);
 }
+
+/* BUTTONS */
+
+.button {
+    border: 1px solid var(--color-links);
+    display: inline-block;
+    background-color: var(--color-links);
+    color: white;
+
+/* ENABLE BOX MODEL STYLING */
+display: inline-block;
+padding: var(--unit-small);
+margin: var(--unit-small);
+
+/* GET RID OF THE UNDERLINE */
+text-decoration: none;
+
++ .button {
+    margin-left: var(--unit-small);
+}
+
+/*
+
+}
