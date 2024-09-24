@@ -330,6 +330,7 @@ body {
         ul {
             /* REMOVE MARGINS & BULLETS FROM LIST */
             margin: 0;
+            padding: 0;
             list-style: none;
 
             /* DISPLAY CHILDREN SIDE-BY-SIDE */
