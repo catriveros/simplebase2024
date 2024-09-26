@@ -21,10 +21,15 @@ CSS TABLE OF CONTENTS
     # HEADER
         # LOGO
         # SITE NAV
+        # SITE-HEADER-ON-TOP-OF-HERO
     # MAIN
         # SECTIONS
             # HERO
     # FOOTER
+
+# UI COMPONENTS
+    # BUTTONS
+    # CARDS
 
 
 --------------------------------
@@ -39,25 +44,27 @@ CSS TABLE OF CONTENTS
 
 :root {
 
-/* DEFINE ALL COMMONLY USED COLORS HERE */
---color-body-background: rgb(255 255 255);
---color-text-body: rgb(0 0 0 / .8);
---color-text-headings: rgb(0 0 0 / 1);
+    /* DEFINE ALL COMMONLY USED COLORS HERE */
+    --color-body-background: rgb(255 255 255);
+    --color-text-body: rgb(0 0 0 / .8);
+    --color-text-headings: rgb(0 0 0 / 1);
 
---color-links: rgb(0 0 153 / 0.8);
---color-links-hover: rgb(0 0 153 / 1);
+    --color-links-dark: rgb(102 102 102);
+    --color-links-darker: rgb(0 0 0);
+    --color-links-light: rgb(204 204 204);
+    --color-links-lighter: rgb(255 255 255);
 
---color-siteheader-background: transparent;
---color-siteheader-links: rgb(255 255 255);
+    --color-siteheader-background: transparent;
+    --color-siteheader-links: rgb(255 255 255);
 
---color-hero-background: rgb(100 100 100);
---color-hero-text: rgb(255 255 255 / .8);
---color-hero-headings: rgb(255 255 255 / 1);
+    --color-hero-background: rgb(100 100 100);
+    --color-hero-text: rgb(255 255 255 / .8);
+    --color-hero-headings: rgb(255 255 255 / 1);
 
---color-sitefooter-background: rgb(100 100 100);
---color-sitefooter-text: rgb(255 255 255 / .8);
---color-sitefooter-headings: rgb(255 255 255 / 1);
---color-sitefooter-links: rgb(255 255 255);
+    --color-sitefooter-background: rgb(100 100 100);
+    --color-sitefooter-text: rgb(255 255 255 / .8);
+    --color-sitefooter-headings: rgb(255 255 255 / 1);
+    --color-sitefooter-links: rgb(255 255 255);
 
     /*  DEFINE ALL FONTS USED HERE */
     --font-body: system-ui, Helvetica, Arial, sans-serif;
@@ -181,6 +188,14 @@ img {
     left: -9999px;
 }
 
+@media (max-width: 767px) {
+    .hide-visually-smallonly {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+}
+
 
 /* ------------- */
 /* -- LAYOUT -- */
@@ -293,7 +308,7 @@ body {
 /* -- SITE STRUCTURE -- */
 /* -------------------- */
 
-//* SITE HEADER */
+/* SITE HEADER */
 .site-header {
     background-color: var(--color-siteheader-background);
     
