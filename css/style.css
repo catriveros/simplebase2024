@@ -293,27 +293,22 @@ body {
 /* -- SITE STRUCTURE -- */
 /* -------------------- */
 
-/* SITE HEADER */
+//* SITE HEADER */
 .site-header {
     background-color: var(--color-siteheader-background);
     
     /* PUT ALL HEADER CHILDREN SIDE-BY-SIDE AND VERT CENTERED ON LARGE SCREENS */
-    @media (min-width 768) {
+    @media (min-width: 768px) {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
     /* ADD SOME GENERAL SPACING AROUND THE HEADER */
     padding: var(--unit-small);
 
-    /* RENDER HEADER ON TOP OF HERO */
-    position: absolute;
-    width: 100%;
-
-
-    /* REMOVE LINK UNDERLINES AND SET SITE HEADER LINK COLOR */
+    /* REMOVE LINK UNDERLINES IN HEADER */
     a {
-        color: var(--color-siteheader-links);
         text-decoration: none;
     }
 
@@ -331,6 +326,7 @@ body {
             margin: 0;
             text-wrap: nowrap;
         }
+
     }
 
     /* SITE-NAV */
@@ -342,11 +338,11 @@ body {
             padding: 0;
             list-style: none;
 
-            /* DISPLAY CHILDREN SIDE-BY-SIDE */
-            display: flex;
-            @media (min-width 768){
+            /* DISPLAY CHILDREN SIDE-BY-SIDE ON LARGE SCREENS */
+            @media (min-width: 768px) {
                 display: flex;
             }
+
         }
 
         /* MAKE SITE NAV LINKS BIG LIKE BUTTONS */
@@ -357,6 +353,30 @@ body {
 
     }
 
+}
+
+/* PLACE SITE HEADER ON TOP OF HERO */
+.site-header.on-top-of-hero {
+
+    /* RENDER HEADER ON TOP OF HERO ON LARGE SCREENS */
+    @media (min-width: 768px) {
+        position: absolute;
+        width: 100%;
+    }
+
+        /* SET SITE HEADER LINK COLOR ON LARGE SCREENS */
+    @media (min-width: 768px) {
+        a {
+            color: var(--color-siteheader-links);
+        }
+    }
+
+    & + .site-main > .hero {
+
+        /* ADD MORE SPACE ON TOP FOR THE ABSOLUTE HEADER */
+        padding-top: calc(4em + var(--unit-large));
+
+    }
 
 }
 
@@ -374,39 +394,86 @@ section {
 
 .hero {
     background-color: var(--color-hero-background);
+    color: var(--color-hero-text);
 
-    /* ADD MORE SPACE ON TOP FOR THE ABSOLUTE HEADER */
-    padding-top: calc(4em + var(--unit-large));
+    h1, h2, h3 {
+        color: var(--color-hero-headings);
+    }
+
 }
 
 /* SITE FOOTER */
 .site-footer {
-    background-color: skyblue;
+    background-color: var(--color-sitefooter-background);
+    color: var(--color-sitefooter-text);
 
     /* ADD SOME GENERAL PADDING AROUND THE FOOTER */
     padding: var(--unit-small);
+
+    h1, h2, h3 {
+        color: var(--color-sitefooter-headings);
+    }
+
+    a {
+        color: var(--color-links-light);
+
+        &:hover {
+            color: var(--color-links-lighter);
+        }
+    }
+
+    .site-nav {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
 }
+
+
+/* ------------------- */
+/* -- UI COMPONENTS -- */
+/* ------------------- */
 
 /* BUTTONS */
 
 .button {
-    border: 1px solid var(--color-links);
-    display: inline-block;
-    background-color: var(--color-links);
+    /* SET THE BUTTON COLORS */
+    border: 1px solid var(--color-links-dark);
+    background-color: var(--color-links-dark);
     color: white;
 
-/* ENABLE BOX MODEL STYLING */
-display: inline-block;
-padding: var(--unit-small);
-margin: var(--unit-small);
+    /* ENABLE BOX MODEL STYLING */
+    display: inline-block;
+    padding: var(--unit-small);
+    margin: var(--unit-small) 0;
 
-/* GET RID OF THE UNDERLINE */
-text-decoration: none;
+    /* GET RID OF THE UNDERLINE */
+    text-decoration: none;
 
-+ .button {
-    margin-left: var(--unit-small);
-}
+    + .button {
+        margin-left: var(--unit-small);
+    }
 
-/*
+    &:hover {
+        color: #fff;
+        background-color: var(--color-links-darker);
+        border-color: var(--color-links-darker);
+    }
+
+    /* LIGHT BUTTON VARIANT */
+    &.light {
+        border-color: var(--color-links-light);
+        background-color: var(--color-links-light);
+        color: var(--color-links-darker);
+
+        &:hover {
+            border-color: var(--color-links-lighter);
+            background-color: var(--color-links-lighter);
+        }
+
+    }
 
 }
