@@ -1,4 +1,4 @@
 # Simple Base
-This is John Doe's simple set of starter html, css, and js for a simple static website.
+This is Cat's class website
 
-[View Site](https://johndoenma.github.io/simplebase)
+[View my student site](https://catriveros.github.io/studentsite)
